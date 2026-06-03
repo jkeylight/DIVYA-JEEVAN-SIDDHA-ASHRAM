@@ -16,11 +16,17 @@
 <meta name="twitter:description" content="Upcoming yagnas, pujas, and spiritual gatherings.">
 <meta name="twitter:image" content="https://divyajivansiddhaashram.com/images/og-default.jpg">
 <link rel="canonical" href="https://divyajivansiddhaashram.com/events.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Divya Jivan Siddha Ashram</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Cormorant+SC:wght@300;400;600&family=Outfit:wght@200;300;400;500&family=Hind:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+    /* Accessibility: Skip to content */
+    .skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);z-index:10000;padding:0.8rem 2rem;background:var(--gold);color:var(--ink);font-family:var(--ui);font-size:var(--sm);text-decoration:none;border-radius:0 0 8px 8px;transition:top .2s;letter-spacing:.1em;text-transform:uppercase;}
+    .skip-link:focus{top:0;}
+</style>
 </head>
 <body>
 
@@ -68,7 +74,7 @@
 </div>
 
 <!-- ══ NAV ══ -->
-<nav id="nav">
+<nav id="nav" aria-label="Primary navigation">
   <a href="index.html" class="nav-logo">
     <svg viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M20 240 L20 100 Q20 20 100 20 Q180 20 180 100 L180 240" stroke="#C4A96B" stroke-width="2" fill="none"/>
@@ -109,7 +115,7 @@
 
 
 <!-- ━━━━━━━━━━━━━ MAIN ━━━━━━━━━━━━━ -->
-<main id="main" style="opacity:0;transition:opacity .8s;">
+<main id="main" role="main" aria-label="Main content" style="opacity:0;transition:opacity .8s;">
   <!-- ══ EVENTS HERO ══ -->
 <section class="section" style="background:var(--void); padding:15vh 5vw 5vh; text-align:center; position:relative;">
   <p class="eyebrow" style="justify-content:center;" data-r data-i18n="ev-hero-eye">Sacred Calendar 2025–2026</p>
@@ -225,7 +231,7 @@
 </main><!-- /main -->
 
 <!-- ══ FOOTER ══ -->
-<footer id="footer" style="opacity:0;transition:opacity .8s;">
+<footer aria-label="Site footer" id="footer" style="opacity:0;transition:opacity .8s;">
   <div class="footer-top">
     <div class="footer-brand">
       <div class="footer-logo">

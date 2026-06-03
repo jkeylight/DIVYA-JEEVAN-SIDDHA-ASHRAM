@@ -222,7 +222,7 @@ const i18n = {
     'meta-onsite':'On-site','meta-all':'All Levels','meta-appointment':'By Appointment',
     'course-enquire':'Enquire',
     'footer-sadhana':'Sadhana','footer-learn':'Learn','footer-join':'Join',
-    'close-mandala':'Close Mandala',
+    'skip-nav':'Skip to content','close-mandala':'Close Mandala',
     'mm-about':'About Guruji','mm-lineage':'Guru Parampara','mm-mission':'Mission & Vision',
     'mm-philosophy':'Philosophy','mm-ashram':'The Ashram','mm-testimonials':'Testimonials',
     'mm-intro':'Introduction to Sadhana','mm-21shakti':'21 Shakti Sadhanas','mm-navdurga':'Nav Durga Practices',
@@ -419,6 +419,12 @@ const i18n = {
     'fq-d3-q':'Is online diksha safe?','fq-d3-a':'For foundational practices, yes. For advanced practices, in-person is required.',
     'fq-closing-q':'"The Guru answers all questions — sometimes with words, sometimes with silence, sometimes with a task."',
     'fq-closing-p':'Still have questions? Call <span style="color:var(--gold-b);">+91 82604 37455</span> or visit our Contact page.',
+    /* ── 404 page ── */
+    'nf-title':'This Path<br><em>Does Not Exist</em>',
+    'nf-desc':'The page you seek has dissolved like morning mist. Perhaps it was never meant to be found — or perhaps you are looking in the wrong place.',
+    'nf-home':'Return to Sacred Ground',
+    'nf-contact':'Contact the Ashram',
+    'nf-quote':'"The divine path is never lost — only the seeker\'s direction changes."',
   },
   hi: {
 
@@ -641,7 +647,7 @@ const i18n = {
     'meta-onsite':'आश्रम में','meta-all':'सभी स्तर','meta-appointment':'नियुक्ति द्वारा',
     'course-enquire':'जानकारी लें',
     'footer-sadhana':'साधना','footer-learn':'सीखें','footer-join':'जुड़ें',
-    'close-mandala':'मंडल बंद करें',
+    'skip-nav':'मुख्य सामग्री पर जाएं','close-mandala':'मंडल बंद करें',
     'mm-about':'गुरुजी के बारे में','mm-lineage':'गुरु परम्परा','mm-mission':'मिशन और दृष्टि',
     'mm-philosophy':'दर्शन','mm-ashram':'आश्रम','mm-testimonials':'प्रशंसापत्र',
     'mm-intro':'साधना परिचय','mm-21shakti':'21 शक्ति साधनाएँ','mm-navdurga':'नव दुर्गा साधना',
@@ -838,6 +844,12 @@ const i18n = {
     'fq-d3-q':'क्या ऑनलाइन दीक्षा सुरक्षित है?','fq-d3-a':'आधारभूत अभ्यासों के लिए हाँ। उन्नत के लिए व्यक्तिगत उपस्थिति आवश्यक।',
     'fq-closing-q':'"गुरु सभी प्रश्नों का उत्तर देता है।"',
     'fq-closing-p':'अभी भी प्रश्न हैं? कॉल करें <span style="color:var(--gold-b);">+91 82604 37455</span>।',
+    /* ── 404 page (hi) ── */
+    'nf-title':'यह मार्ग<br><em>अस्तित्व में नहीं है</em>',
+    'nf-desc':'जो पृष्ठ आप खोज रहे हैं वह सुबह की ओस की तरह घुल गया है। शायद इसे कभी ढूंढने का इरादा नहीं था।',
+    'nf-home':'पवित्र भूमि पर लौटें',
+    'nf-contact':'आश्रम से संपर्क करें',
+    'nf-quote':'"दिव्य पथ कभी नहीं भटकता — केवल साधक की दिशा बदलती है।"',
   },
   od: {
 
@@ -1060,7 +1072,7 @@ const i18n = {
     'meta-onsite':'ଆଶ୍ରମରେ','meta-all':'ସମସ୍ତ ସ୍ତର','meta-appointment':'ନିଯୁକ୍ତି ଦ୍ୱାରା',
     'course-enquire':'ଜାଣନ୍ତୁ',
     'footer-sadhana':'ସାଧନା','footer-learn':'ଶିଖନ୍ତୁ','footer-join':'ଯୋଗ ଦିଅନ୍ତୁ',
-    'close-mandala':'ମଣ୍ଡଳ ବନ୍ଦ',
+    'skip-nav':'ମୁଖ୍ୟ ବିଷୟବସ୍ତୁକୁ ଯାନ୍ତୁ','close-mandala':'ମଣ୍ଡଳ ବନ୍ଦ',
     'mm-about':'ଗୁରୁଜୀ ବିଷୟ','mm-lineage':'ଗୁରୁ ପରମ୍ପରା','mm-mission':'ଲକ୍ଷ୍ୟ ଓ ଦୃଷ୍ଟି',
     'mm-philosophy':'ଦର୍ଶନ','mm-ashram':'ଆଶ୍ରମ','mm-testimonials':'ପ୍ରଶଂସାପତ୍ର',
     'mm-intro':'ସାଧନା ପରିଚୟ','mm-21shakti':'21 ଶକ୍ତି ସାଧନା','mm-navdurga':'ନବ ଦୁର୍ଗା ସାଧନା',
@@ -1257,6 +1269,12 @@ const i18n = {
     'fq-d3-q':'କ\'ଣ ଅନଲାଇନ୍ ଦୀକ୍ଷା ସୁରକ୍ଷିତ?','fq-d3-a':'ଆଧାରଭୂତ ଅଭ୍ୟାସ ପାଇଁ ହଁ। ଉନ୍ନତ ପାଇଁ ବ୍ୟକ୍ତିଗତ ଉପସ୍ଥିତି ଆବଶ୍ୟକ।',
     'fq-closing-q':'"ଗୁରୁ ସମସ୍ତ ପ୍ରଶ୍ନର ଉତ୍ତର ଦିଅନ୍ତି।"',
     'fq-closing-p':'ଏବେ ବି ପ୍ରଶ୍ନ ଅଛି? କଲ୍ କରନ୍ତୁ <span style="color:var(--gold-b);">+91 82604 37455</span>।',
+    /* ── 404 page (od) ── */
+    'nf-title':'ଏହି ପଥ<br><em>ଅସ୍ତିତ୍ଵରେ ନାହିଁ</em>',
+    'nf-desc':'ଆପଣ ଖୋଜୁଥିବା ପୃଷ୍ଠା ସକାଳର ଶିଶିର ପରି ଘୁଲିଯାଇଛି। ହୁଏତ ଏହା କେବେ ଖୋଜିବା ପାଇଁ ଉଦ୍ଦିଷ୍ଟ ନଥିଲା — କିମ୍ବା ଆପଣ ଭୁଲ ସ୍ଥାନରେ ଖୋଜୁଛନ୍ତି।',
+    'nf-home':'ପବିତ୍ର ଭୂମିକୁ ଫେରନ୍ତୁ',
+    'nf-contact':'ଆଶ୍ରମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ',
+    'nf-quote':'"ଦିବ୍ୟ ପଥ କେବେ ହଜେ ନାହିଁ — କେବଳ ସାଧକର ଦିଶା ପରିବର୍ତ୍ତନ ହୁଏ।"',
   }
 };
 

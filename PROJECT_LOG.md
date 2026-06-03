@@ -42,23 +42,53 @@ The website serves as the digital presence for the ashram — showcasing its pra
 | Refund Policy | `refund.html` | Donations, courses, books refund rules |
 | Shipping Policy | `shipping.html` | Domestic/international shipping rates, processing times |
 
+### Special Pages
+
+| Page | File | Description |
+|------|------|-------------|
+| 404 Error | `404.html` | Custom 404 page matching site design with i18n support |
+
 ### Shared Infrastructure
 
 | File | Description |
 |------|-------------|
 | `styles.css` | Complete design system — CSS custom properties, responsive grid, all component styles |
 | `shared.js` | i18n system (EN/HI/OD), custom cursor, preloader, nav scroll, scroll-reveal, language switcher |
+| `favicon.svg` | SVG flame logo favicon matching the site's sacred branding |
+
+### SEO & Discoverability
+
+| File | Description |
+|------|-------------|
+| `robots.txt` | Standard robots.txt allowing all crawlers, pointing to sitemap |
+| `sitemap.xml` | XML sitemap with all 19 pages listed |
+
+**All 18 HTML pages** include:
+- Open Graph meta tags (og:title, og:description, og:type, og:url)
+- Twitter Card meta tags
+- Canonical URLs
+- Proper page titles and meta descriptions
+- `<link rel="icon" type="image/svg+xml" href="favicon.svg">`
+
+### Accessibility
+
+**All 18 HTML pages** include:
+- Skip-to-content link (`.skip-link`) — visible on keyboard focus
+- ARIA labels on `<nav>` ("Primary navigation") and `<footer>` ("Site footer")
+- `role="main"` and `aria-label="Main content"` on main content area
+- `lang="en"` attribute on `<html>` element
+- Skip-nav i18n keys in all 3 languages (EN: "Skip to content", HI: "मुख्य सामग्री पर जाएं", OD: "ମୁଖ୍ୟ ବିଷୟବସ୍ତୁକୁ ଯାନ୍ତୁ")
 
 ### Internationalization (i18n) — COMPLETE
 
 - **3 languages:** English (EN), Hindi (हि), Odia (ଓ)
-- **~900+ translation keys** across all pages in `shared.js`
-- **All 18 pages** have `data-i18n` attributes on headings, descriptions, cards, tables, FAQ Q&A, quotes, and key visible text
+- **~950+ translation keys** across all pages in `shared.js`
+- **All 19 pages** (including 404) have `data-i18n` attributes on headings, descriptions, cards, tables, FAQ Q&A, quotes, and key visible text
 - Language switcher works on every page — nav links, hero sections, section headings, content, footer
 
 ### Footer & Navigation
 
-- Consistent footer across all 18 pages with proper links to:
+- Consistent footer across all 19 pages with proper links to:
   - Sadhana, Learn (Books, Courses, About), Join (Diksha, Membership, Volunteer, Events, Donate, Shop)
   - Legal (Privacy, Terms, Tantra Safety, Disclaimer)
 - Nav logo links fixed from `#` to `index.html` on all pages
@@ -84,7 +114,6 @@ These sections are documented in the project reference files but have **not yet 
 | Missing Page | Source | Priority |
 |---|---|---|
 | Books Library | `BOOKS.txt` — full book descriptions | Medium |
-| Guru Parampara (detailed) | `about_content.html` covers basics | Low |
 | Brahma Vidya (dedicated) | Referenced in footer/philosophy | Medium |
 | Testimonials | Referenced in footer | Low |
 | Media & Films | Referenced in footer | Low |
@@ -94,23 +123,15 @@ These sections are documented in the project reference files but have **not yet 
 | 21 Shakti Sadhanas (detailed) | `sadhana_content.html` covers overview | Medium |
 | Nav Durga Practices (detailed) | Referenced in sadhana | Medium |
 | Maa Kali Sadhana (detailed) | Referenced in sadhana | Medium |
-| Samsan Sadhana (detailed) | Referenced in sadhana | Low |
-| Agni Tattva (detailed) | Referenced in sadhana | Low |
 
 ### Technical Improvements Needed
 
-- [ ] **Favicon** — no custom favicon.svg or .ico yet
-- [ ] **Meta tags** — missing Open Graph / Twitter Card meta for social sharing
-- [ ] **Structured data** — no JSON-LD schema for SEO
-- [ ] **Accessibility** — ARIA labels on interactive elements, skip-to-content link
-- [ ] **Form handling** — forms currently don't submit anywhere (need backend or form service like Formspree/Netlify Forms)
+- [ ] **Form handling** — forms currently don't submit anywhere (need backend or Formspree/Netlify Forms)
 - [ ] **Images** — no actual ashram photographs integrated (design has placeholder patterns)
 - [ ] **Performance** — no image optimization, no lazy loading
 - [ ] **Analytics** — no tracking (Google Analytics, Plausible, etc.)
+- [ ] **Structured data** — no JSON-LD schema for SEO
 - [ ] **PWA / Service Worker** — not implemented
-- [ ] **404 page** — not created
-- [ ] **sitemap.xml** — not created
-- [ ] **robots.txt** — not created
 
 ### Content Gaps
 
@@ -121,13 +142,6 @@ These sections are documented in the project reference files but have **not yet 
 - [ ] Guruji's detailed biography and photo
 - [ ] Course curriculum details and schedules
 - [ ] Membership welcome kit details
-
-### Cleanup Needed
-
-- [ ] Remove temporary patch scripts (`patch_i18n.js`, `patch_i18n_new.js`, `patch_i18n_final.js`, `patch_i18n_answers.js`, `check_i18n.js`, `update_i18n.js`)
-- [ ] Remove `extract.js`, `wrap.js` (utility scripts used during development)
-- [ ] Some pages have duplicate i18n keys in `shared.js` (harmless but messy)
-- [ ] `divya-jivan-home.html` and `template.html` — appear to be development artifacts
 
 ---
 
@@ -159,13 +173,18 @@ These sections are documented in the project reference files but have **not yet 
 ├── disclaimer.html         # Disclaimer
 ├── refund.html             # Refund Policy
 ├── shipping.html           # Shipping Policy
+├── 404.html                # Custom 404 error page
+├── favicon.svg             # SVG flame logo favicon
 ├── styles.css              # Complete design system
 ├── shared.js               # i18n system + animations + nav
+├── robots.txt              # Search engine crawler instructions
+├── sitemap.xml             # XML sitemap for SEO
+├── check_i18n.js           # i18n validation utility
+├── update_i18n.js          # i18n update utility
 ├── ANTIGRAVITY_MASTER_PROMPT.md  # Master design prompt
 ├── BOOKS.txt               # Book reference data
 ├── more.txt                # Additional page content reference
 ├── PROJECT_LOG.md          # This file
-├── [temp scripts]          # patch_i18n*.js, extract.js, wrap.js, etc.
 ```
 
 ---
@@ -174,14 +193,15 @@ These sections are documented in the project reference files but have **not yet 
 
 | Metric | Count |
 |--------|-------|
-| Total HTML pages | 24 (18 content + 6 content files) |
+| Total HTML pages | 25 (19 content + 6 content files) |
 | Total CSS | 1 (`styles.css` — comprehensive design system) |
 | Total JS | 1 (`shared.js` — i18n + animations) |
 | Languages supported | 3 (English, Hindi, Odia) |
-| i18n translation keys | ~900+ |
+| i18n translation keys | ~950+ |
 | Footer links | Consistent across all pages |
 | Legal pages | 5 (Privacy, Terms, Tantra Safety, Disclaimer, Refund) |
 | Forms | 5 (Events registration, Courses enquiry, Diksha application, Contact, Shop enquiry) |
+| Accessibility features | Skip-to-content, ARIA labels, lang attribute, roles |
 
 ---
 

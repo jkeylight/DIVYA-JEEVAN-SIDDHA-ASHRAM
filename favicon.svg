@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#0A0805"/>
+  <!-- Arch -->
+  <path d="M8 56 L8 24 Q8 8 32 8 Q56 8 56 24 L56 56" stroke="#C4A96B" stroke-width="2" fill="none" opacity=".8"/>
+  <!-- Diya bowl -->
+  <path d="M16 46 Q32 42 48 46 Q45 38 32 36 Q19 38 16 46Z" stroke="#C4A96B" stroke-width="1.5" fill="rgba(196,169,107,.12)"/>
+  <!-- Flame -->
+  <path d="M32 34 Q27 24 32 16 Q37 24 32 34Z" stroke="#C4A96B" stroke-width="1.5" fill="rgba(196,169,107,.3)"/>
+  <!-- Top dot -->
+  <circle cx="32" cy="10" r="1.5" fill="#C4A96B" opacity=".7"/>
+</svg>
