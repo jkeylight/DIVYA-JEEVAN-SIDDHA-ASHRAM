@@ -1,0 +1,24 @@
+# Temp development scripts
+patch_i18n.js
+patch_i18n_new.js
+patch_i18n_final.js
+patch_i18n_answers.js
+check_i18n.js
+update_i18n.js
+extract.js
+wrap.js
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node
+node_modules/
+package-lock.json

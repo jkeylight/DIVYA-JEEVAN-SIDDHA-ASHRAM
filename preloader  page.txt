@@ -1,0 +1,20 @@
+help me with only the preloader  page --------PRELOADER REDESIGN - FILM ENTRANCE SCENE
+I  want. A cinematic, layered entrance:
+The Sequence
+Step	Element	Action	Duration
+1	Diya (flame + bowl)	Fades in smoothly	0.8s
+2	Diya holds	Stays visible	3 seconds
+3	"DIVYA"	Fades in smoothly	0.6s
+4	"Jivan Siddha Ashram"	Fades in smoothly	0.6s
+5	All text holds	Stays visible	1 second
+6	"ENTER" button	Fades in smoothly	0.5s
+7	User clicks ENTER	Temple doors open → Home page	-
+Visual Flow
+text
+Time 0.0s:    [Screen black]
+Time 0.5s:    [Diya appears - glowing flame]
+Time 3.5s:    [Diya] + ["DIVYA" appears]
+Time 4.1s:    [Diya] + ["DIVYA"] + ["Jivan Siddha Ashram" appears]
+Time 5.1s:    [All elements hold]
+Time 6.1s:    ["ENTER" button fades in]
+Time ?:       User clicks → Panels slide apart → Home page reveals
