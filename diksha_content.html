@@ -83,7 +83,7 @@
     </div>
     
     <div style="max-width:700px; margin:0 auto;" data-r data-d="1">
-      <form style="display:flex; flex-direction:column; gap:1.5rem;">
+      <form style="display:flex; flex-direction:column; gap:1.5rem;" action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST"  data-formspree="diksha-application" data-redirect="thank-you.html">
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
           <input type="text" placeholder="Full Name *" style="width:100%; background:var(--void); border:1px solid var(--border); color:var(--paper); padding:1rem 1.5rem; font-family:var(--ui); font-size:var(--sm); outline:none; transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'" required>
           <input type="number" placeholder="Age *" min="18" style="width:100%; background:var(--void); border:1px solid var(--border); color:var(--paper); padding:1rem 1.5rem; font-family:var(--ui); font-size:var(--sm); outline:none; transition:border-color 0.3s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'" required>
@@ -112,7 +112,10 @@
         </label>
 
         <button type="submit" class="btn-primary" style="align-self:flex-start; border:none; cursor:pointer; margin-top:1rem;"> data-i18n="diksha-form-submit"</button>
-      </form>
+      <input type="hidden" name="_subject" value="New Diksha Application - Divya Jivan Siddha Ashram">
+<input type="hidden" name="_next" value="thank-you.html">
+<input type="hidden" name="_form" value="diksha-application">
+</form>
     </div>
   </div>
 </section>
