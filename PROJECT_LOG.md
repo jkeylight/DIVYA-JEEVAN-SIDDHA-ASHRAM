@@ -157,43 +157,241 @@ Each form includes:
 
 ---
 
-## ⏳ What Is Pending / Not Yet Completed
+## 🔄 Updates To Be Done — Comprehensive Checklist
 
-### Content Pages (from `more.txt` / `BOOKS.txt`)
+> **Status Legend:** 🔴 Must Fix (blocks launch) · 🟡 Should Fix (improves quality) · 🟢 Nice to Have (future enhancement)
 
-These sections are documented in the project reference files but have **not yet been created as standalone pages**:
+---
 
-| Missing Page | Source | Priority |
-|---|---|---|
-| Books Library | `BOOKS.txt` — full book descriptions | Medium |
-| Brahma Vidya (dedicated) | Referenced in footer/philosophy | Medium |
-| Testimonials | Referenced in footer | Low |
-| Media & Films | Referenced in footer | Low |
-| Digital Temple | Referenced in footer | Low |
-| Free eBooks | Referenced in footer | Low |
-| Podcasts | Referenced in footer | Low |
-| 21 Shakti Sadhanas (detailed) | `sadhana_content.html` covers overview | Medium |
-| Nav Durga Practices (detailed) | Referenced in sadhana | Medium |
-| Maa Kali Sadhana (detailed) | Referenced in sadhana | Medium |
+### 🔴 MUST FIX — Before Website Launch
 
-### Technical Improvements Needed
+#### 1. Formspree Form ID Replacement (CRITICAL)
 
-- [ ] **Replace Formspree placeholder** — change `YOUR_FORM_ID_HERE` to actual form ID in all 4 content files
-- [ ] **Images** — no actual ashram photographs integrated (design has placeholder patterns)
-- [ ] **Performance** — no image optimization, no lazy loading beyond basic
-- [ ] **Analytics** — no tracking (Google Analytics, Plausible, etc.)
-- [ ] **Structured data** — no JSON-LD schema for SEO
-- [ ] **PWA / Service Worker** — not implemented
+All 4 forms currently use a placeholder Formspree endpoint. **Forms will not work until this is fixed.**
 
-### Content Gaps
+| File | Search & Replace | New Value |
+|------|-----------------|-----------|
+| `events_content.html` | `YOUR_FORM_ID_HERE` | Your actual Formspree form ID |
+| `courses_content.html` | `YOUR_FORM_ID_HERE` | Your actual Formspree form ID |
+| `diksha_content.html` | `YOUR_FORM_ID_HERE` | Your actual Formspree form ID |
+| `contact_content.html` | `YOUR_FORM_ID_HERE` | Your actual Formspree form ID |
 
-- [ ] Bank account details for donations (marked as \"[To be added]\")
-- [ ] UPI ID (marked as \"[To be added]\")
-- [ ] SWIFT/IBAN codes for international donors (marked as \"[To be added]\")
-- [ ] Actual ashram photographs (currently using gradient/pattern placeholders)
-- [ ] Guruji's detailed biography and photo
-- [ ] Course curriculum details and schedules
-- [ ] Membership welcome kit details
+**How to get your Formspree ID:**
+1. Go to https://formspree.io/forms
+2. Create a new form for each purpose (or one form for all)
+3. Copy the form ID from the URL (e.g., `https://formspree.io/f/xyzabcde`)
+4. Replace `YOUR_FORM_ID_HERE` in all 4 files
+5. Test each form by submitting a test entry
+
+#### 2. Payment / Donation Details (CRITICAL)
+
+The `donate.html` page has placeholder text `[To be added]` for all payment methods. Seekers cannot donate without real details.
+
+**Bank Transfer (India) — in `donate.html`:**
+- [ ] Add Account Number
+- [ ] Add IFSC Code
+- [ ] Add Bank Name
+- [ ] Confirm Branch: Borigumma, Odisha
+
+**UPI / GPay / PhonePe — in `donate.html`:**
+- [ ] Add UPI ID
+- [ ] Add QR code image (optional)
+
+**International Donors — in `donate.html`:**
+- [ ] Add SWIFT Code
+- [ ] Add IBAN (if applicable)
+- [ ] Add correspondent bank details (if needed)
+
+#### 3. 80G Tax Exemption Certificate
+
+The `donate.html` page mentions Section 80G tax exemption but does not include:
+- [ ] 80G registration number
+- [ ] Trust PAN number
+- [ ] Certificate copy for download (optional)
+
+---
+
+### 🟡 SHOULD FIX — Improve Quality & Experience
+
+#### 4. Real Ashram Photographs
+
+Currently all pages use CSS gradient/pattern placeholders. Replace with actual photos:
+
+| Location | Placeholder | What Photo Needed |
+|----------|-------------|-------------------|
+| `index.html` hero | SVG rays pattern | Ashram entrance or diya close-up |
+| `index.html` about section | Arch SVG illustration | Guruji portrait or ashram building |
+| `about_content.html` | Portrait placeholder | Guruji photo (with permission) |
+| `about_content.html` | Map placeholder | Google Maps embed for location |
+| `courses_content.html` | Sarp Vidya hero | Course/seminar photograph |
+| `contact_content.html` | Map placeholder | Google Maps embed for Borigumma |
+| `diksha_content.html` | Fire image (base64) | Yagna fire photograph |
+| `shop_content.html` | Book placeholder SVGs | Actual product photos |
+
+**Image optimization checklist:**
+- [ ] Resize all photos to max 1920px wide
+- [ ] Compress to WebP with JPG fallback
+- [ ] Add proper `alt` text in all 3 languages
+- [ ] Add `loading="lazy"` to below-fold images
+- [ ] Create `images/` directory and organize assets
+
+#### 5. i18n Coverage Gaps
+
+Some text elements on certain pages still lack `data-i18n` attributes:
+
+| Page | Gap | Priority |
+|------|-----|----------|
+| `volunteer.html` | Footer tagline, location details not translated | Medium |
+| `membership.html` | Price amounts, percentage labels | Low (currency is universal) |
+| `donate.html` | Bank detail labels, percentage table | Medium |
+| `faq.html` | Section category headings | Low |
+| `privacy.html` | Legal body text (long paragraphs) | Low |
+| `terms.html` | Legal body text (long paragraphs) | Low |
+| `tantra-safety.html` | Danger descriptions, myth answers | Medium |
+| `disclaimer.html` | Legal body text | Low |
+| `refund.html` | Table cell values (refundable/non-refundable) | Low |
+| `shipping.html` | Table cell values (prices, timeframes) | Low |
+| All `_content.html` | Many paragraph-level texts lack `data-i18n` | Medium |
+
+**Note:** Legal pages (Privacy, Terms, Disclaimer) have lengthy legal text. Full Hindi/Odia translation is optional — key headings and summary sentences should be translated.
+
+#### 6. Footer Translation Gaps
+
+Footer link text is NOT translated in Hindi/Odia on several pages. The footer uses `data-i18n` on section titles but link text like "Das Mahavidya", "Nav Durga", "Guru Parampara" etc. remain in English even when Hindi/Odia is selected.
+
+- [ ] Add `data-i18n` to all footer link `<a>` tags
+- [ ] Add corresponding Hindi/Odia translations in `shared.js`
+- [ ] Consider: some proper nouns (Sanskrit terms) should remain untranslated across languages
+
+#### 7. Form Placeholder Text Translation
+
+Form placeholder text (e.g., "Full Name *", "Phone Number *", "Message *") is NOT translated when language switches:
+
+- [ ] Add `data-i18n` to all `<input placeholder="...">` and `<select>` elements
+- [ ] Add placeholder translations in `shared.js` for all 3 languages
+- [ ] Note: `placeholder` attribute cannot use `data-i18n` directly — need JS to update placeholders
+
+#### 8. Add `thank-you.html` to Sitemap
+
+The new `thank-you.html` page is not listed in `sitemap.xml`.
+- [ ] Add `<url>` entry to `sitemap.xml` (with `noindex` if preferred)
+
+#### 9. Cross-Page Language Consistency
+
+When user switches language on `index.html`, navigates to `about.html`, the language should persist. Currently works via localStorage, but verify:
+- [ ] Test language persistence across ALL page transitions
+- [ ] Verify footer translations persist on subpages
+- [ ] Check that `lang` attribute on `<html>` updates correctly on each page
+
+---
+
+### 🟢 NICE TO HAVE — Future Enhancements
+
+#### 10. Missing Content Pages (from `more.txt` / `BOOKS.txt`)
+
+These sections are referenced in the project but not yet built:
+
+| Missing Page | Source | Complexity | Priority |
+|---|---|---|---|
+| Books Library | `BOOKS.txt` — full book descriptions | Medium | Medium |
+| Brahma Vidya (dedicated) | Referenced in footer/philosophy | Medium | Medium |
+| Testimonials | Referenced in footer | Low | Low |
+| Media & Films | Referenced in footer | Low | Low |
+| Digital Temple | Referenced in footer | High | Low |
+| Free eBooks | Referenced in footer | Medium | Low |
+| Podcasts | Referenced in footer | Medium | Low |
+| 21 Shakti Sadhanas (detailed) | `sadhana_content.html` covers overview | High | Medium |
+| Nav Durga Practices (detailed) | Referenced in sadhana | Medium | Medium |
+| Maa Kali Sadhana (detailed) | Referenced in sadhana | Medium | Medium |
+
+#### 11. Performance Optimizations
+
+- [ ] **Image optimization** — convert to WebP, add responsive `srcset`
+- [ ] **Critical CSS** — inline above-fold CSS for faster FCP
+- [ ] **Font loading** — add `font-display: swap` and preload key fonts
+- [ ] **Minification** — minify `styles.css` and `shared.js` for production
+- [ ] **Lazy loading** — add `loading="lazy"` to all below-fold images
+- [ ] **DNS prefetch** — add `<link rel="dns-prefetch">` for Google Fonts and Formspree
+
+#### 12. SEO Enhancements
+
+- [ ] **JSON-LD structured data** — add schema.org markup for:
+  - `Organization` (ashram details)
+  - `LocalBusiness` (location, phone)
+  - `Event` (upcoming events)
+  - `Course` (course offerings)
+  - `FAQPage` (FAQ page)
+  - `BreadcrumbList` (all pages)
+- [ ] **Google Search Console** — verify site ownership
+- [ ] **Submit sitemap** to Google and Bing
+- [ ] **Add `hreflang` tags** for multilingual SEO
+- [ ] **Open Graph images** — create unique OG images for each page
+
+#### 13. Analytics & Monitoring
+
+- [ ] **Google Analytics 4** or **Plausible** (privacy-friendly) — add tracking script
+- [ ] **Form submission tracking** — track which forms are submitted
+- [ ] **Language usage tracking** — monitor which language is most used
+- [ ] **Error monitoring** — add 404 tracking
+- [ ] **Uptime monitoring** — ensure site stays available
+
+#### 14. PWA / Offline Support
+
+- [ ] Create `manifest.json` for PWA support
+- [ ] Add service worker for offline caching
+- [ ] Add "Add to Home Screen" prompt
+- [ ] Cache critical assets (CSS, JS, fonts)
+
+#### 15. Content Enrichment
+
+- [ ] **Guruji biography** — detailed life story, photos, timeline
+- [ ] **Course syllabi** — detailed curriculum for each course
+- [ ] **Sadhana descriptions** — expanded descriptions for each practice
+- [ ] **Event photos** — gallery from past events
+- [ ] **Video content** — embedded YouTube/Vimeo for satsangs
+- [ ] **Blog/News section** — regular updates from the ashram
+- [ ] **Testimonials page** — student experiences and stories
+
+#### 16. Interactive Features
+
+- [ ] **FAQ accordion** — collapsible Q&A sections (currently flat list)
+- [ ] **Event calendar** — interactive calendar with event details
+- [ ] **Shop filtering** — JavaScript-based product category filtering
+- [ ] **Sadhana filtering** — working filter buttons on sadhana page
+- [ ] **Smooth scroll** — smooth scroll to anchor links
+- [ ] **Back to top button** — appear on scroll
+
+#### 17. Email Integration
+
+- [ ] **Formspree email templates** — customize confirmation emails
+- [ ] **Newsletter signup** — add email subscription form
+- [ ] **Welcome sequence** — automated email for new subscribers
+- [ ] **Donation receipt** — auto-send tax receipt for donations
+
+#### 18. Security Hardening
+
+- [ ] **Content Security Policy (CSP)** headers
+- [ ] **X-Frame-Options** — prevent iframe embedding
+- [ ] **Referrer-Policy** — control referrer information
+- [ ] **Permissions-Policy** — restrict browser features
+- [ ] **HTTPS enforcement** — ensure all pages load over HTTPS
+
+---
+
+### Priority Order for Implementation
+
+| Step | Task | Effort | Impact |
+|------|------|--------|--------|
+| 1 | Replace Formspree placeholder IDs | 15 min | 🔴 Forms work |
+| 2 | Add bank/UPI/SWIFT details to donate.html | 30 min | 🔴 Donations possible |
+| 3 | Add 80G certificate number | 10 min | 🔴 Tax compliance |
+| 4 | Add real photographs | 2-4 hours | 🟡 Visual trust |
+| 5 | Fix footer link translations | 1-2 hours | 🟡 i18n completeness |
+| 6 | Add form placeholder translations | 1-2 hours | 🟡 Form UX |
+| 7 | Test cross-page language persistence | 30 min | 🟡 i18n reliability |
+| 8 | Add JSON-LD structured data | 2-3 hours | 🟢 SEO boost |
+| 9 | Add analytics tracking | 30 min | 🟢 Data insights |
+| 10 | Create missing content pages | 1-2 days | 🟢 Content completeness |
 
 ---
 
@@ -279,5 +477,5 @@ These sections are documented in the project reference files but have **not yet 
 
 ---
 
-*Last updated: June 4, 2026*
+*Last updated: June 4, 2026 (v2 — with comprehensive updates checklist)*
 *Project repository: https://github.com/jkeylight/DIVYA-JEEVAN-SIDDHA-ASHRAM*
