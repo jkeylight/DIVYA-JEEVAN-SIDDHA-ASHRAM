@@ -425,6 +425,136 @@ const i18n = {
     'nf-home':'Return to Sacred Ground',
     'nf-contact':'Contact the Ashram',
     'nf-quote':'"The divine path is never lost — only the seeker\'s direction changes."',
+
+    'about-parampara-title': 'Guru <em>Parampara</em>',
+    'about-parampara-1': 'Ancient Vedic Origins',
+    'about-parampara-2': 'Atharvaveda Tradition',
+    'about-parampara-3': 'Odisha Tantric Schools',
+    'about-parampara-4': 'Direct Guru Transmission',
+    'about-parampara-5': 'Present Day: Divya Jivan Siddha Ashram',
+    'about-phil1-title': 'Guru Parampara',
+    'about-phil1-desc': 'All authentic transmission is Guru to Shishya. The book cannot initiate. The video cannot transmit. The living flame passes only hand to hand, heart to heart.',
+    'about-phil2-title': 'Brahma Vidya',
+    'about-phil2-desc': 'The supreme science is not philosophy — it is direct experience. Brahma Vidya is the path of knowing the self as Brahman, the infinite consciousness, through disciplined practice and grace.',
+    'about-phil3-title': 'Tantra as Liberation',
+    'about-phil3-desc': 'Tantra is not ritual for ritual\'s sake. Every Sadhana, every Diksha, every practice is a doorway — not to power, but to liberation. The goal is always Mukti.',
+    'about-ashram-heading': 'Find the <em>Source</em>',
+    'about-map-placeholder': 'Google Maps Embed Placeholder',
+    'contact-map-placeholder': 'Google Maps Embed (Borigumma, Odisha)',
+
+    'about-hero-eyebrow': 'The Living Lineage',
+    'about-hero-title': 'Ancient Roots.<br><em>Living Wisdom.</em>',
+    'about-guruji-lead': 'Guruji has spent decades in the direct practice and transmission of Tantric and Vedic sciences in the ancient tradition of Odisha.',
+    'about-guruji-p1': 'His lineage traces an unbroken chain of Guru-Shishya transmission that predates recorded history.',
+    'about-guruji-p2': 'He resides at the ashram in Borigumma, Horadali, and receives seekers by appointment.',
+    'about-mission-quote': '"The mission of Divya Jivan Siddha Ashram is singular: to keep the flame burning. Not to reform, not to modernise, not to dilute — but to transmit what has been received, intact and alive, to those rare souls who are truly ready."',
+    'about-phil-guru': 'All authentic transmission is Guru to Shishya. The book cannot initiate. The video cannot transmit. The living flame passes only hand to hand, heart to heart.',
+    'about-phil-brahma': 'The supreme science is not philosophy — it is direct experience. Brahma Vidya is the path of knowing the self as Brahman, the infinite consciousness, through disciplined practice and grace.',
+    'about-phil-tantra': 'Tantra is not ritual for ritual\'s sake. Every Sadhana, every Diksha, every practice is a doorway — not to power, but to liberation. The goal is always Mukti.',
+    'about-ashram-title': 'Find the <em>Source</em>',
+    'about-ashram-address': 'Address',
+    'about-ashram-phone': 'Phone/WhatsApp',
+    'about-ashram-note': 'The ashram does not maintain fixed visiting hours. All visits are by prior appointment only. Please call or WhatsApp before travelling.',
+    'sadhana-hero-eyebrow': 'The Sacred Practices',
+    'sadhana-hero-title': 'Paths to<br><em>Siddhi.</em>',
+    'sadhana-filter-all': 'All',
+    'sadhana-filter-maha': 'Mahavidyas',
+    'sadhana-filter-navdurga': 'Nav Durga',
+    'sadhana-filter-vedic': 'Vedic',
+    'sadhana-filter-aghor': 'Aghor',
+    'sadhana-filter-cemetery': 'Cemetery',
+    'sadhana-filter-healing': 'Healing',
+    'sadhana-safety-notice': 'Many practices on this page require direct Guru transmission. Self-practice of restricted Sadhanas without initiation can cause serious harm. Please contact the ashram before attempting any advanced practice.',
+    'events-hero-eyebrow': 'Sacred Calendar 2025–2026',
+    'events-hero-title': 'Upcoming<br><em>Gatherings.</em>',
+    'events-featured-tag': 'Featured Gathering',
+    'events-featured-title': 'Navratri Sadhana Camp',
+    'events-featured-date': 'March 19–27, 2026 &nbsp;|&nbsp; Borigumma, Odisha',
+    'events-featured-desc': 'Nine consecutive days of intensive Nav Durga practices. Each day is dedicated to one form of Durga — from Maa Shailputri on day one to Maa Siddhidatri on day nine. Open to all sincere seekers. Free of charge. Prior registration required.',
+    'events-register-btn': 'Register Now',
+    'events-reg-eyebrow': 'Attend a Gathering',
+    'events-reg-title': 'Registration',
+    'events-reg-desc': 'All gatherings are held at Divya Jivan Siddha Ashram, Borigumma, Horadali, Odisha. Accommodation available on request. Call <span style="color:var(--gold-b);">+91 8260437455</span> to confirm attendance.',
+    'events-reg-submit': 'Submit Application',
+    'courses-hero-eyebrow': 'Paths of Knowledge',
+    'courses-hero-title': 'Vidya &<br><em>Courses.</em>',
+    'courses-all-eyebrow': 'All Paths',
+    'courses-all-title': 'Initiations & Sciences',
+    'courses-all-desc': 'Each tradition transmitted Guru to Shishya — as it has been for thousands of years.',
+    'courses-enquiry-eyebrow': 'Seek Knowledge',
+    'courses-enquiry-title': 'Course Enquiry',
+    'courses-enquiry-submit': 'Send Enquiry',
+    'diksha-hero-title': 'Initiation is not a ceremony —<br><em>it is a transmission.</em>',
+    'diksha-hero-sub': 'The flame of Brahma Vidya is passed from Guru to Shishya, as it has been since the beginning. To receive Diksha is to enter an unbroken chain of living wisdom that stretches back to the origin of time.',
+    'diksha-what-title': 'What is <em>Diksha?</em>',
+    'diksha-what-desc': 'Diksha is the sacred act by which a Guru transmits a portion of his own realisation, his own Shakti, directly into the consciousness of the prepared student. It cannot be read about, watched on video, or received online. It requires physical presence, sincere preparation, and the grace of the Guru. At Divya Jivan Siddha Ashram, Diksha is not given lightly. It is a sacred contract between Guru and Shishya that carries obligations on both sides.',
+    'diksha-levels-title': 'Levels of <em>Initiation</em>',
+    'diksha-level1-title': 'Mantra Diksha',
+    'diksha-level1-desc': 'Entry level initiation, receiving a personal mantra for daily practice and connection.',
+    'diksha-level2-title': 'Tantra Diksha',
+    'diksha-level2-desc': 'Formal initiation into Tantric practice and the specific sadhanas of the lineage.',
+    'diksha-level3-title': 'Vaishnav Diksha',
+    'diksha-level3-desc': 'Formal Vaishnav lineage initiation, connecting the seeker directly to the core tradition.',
+    'diksha-level4-title': 'Sarp Vidya Diksha',
+    'diksha-level4-desc': 'Rare, by invitation only. Initiation into the deepest mysteries of the serpent science.',
+    'diksha-eligibility': 'Eligibility',
+    'diksha-eligibility-desc': 'The Guru alone determines readiness. However, sincere seekers should: be of stable mind and body, have no current involvement in conflicting spiritual paths, be willing to commit to practice as prescribed, and approach with genuine humility and devotion. Age minimum: 18 years.',
+    'diksha-conduct': 'Code of Conduct',
+    'diksha-conduct-desc': 'Initiated students are expected to maintain: daily practice as prescribed, respect for the Guru Parampara, confidentiality of transmitted practices, abstention from sharing initiatory material with uninitiated persons, and regular communication with the ashram.',
+    'diksha-form-title': 'Application for <em>Diksha</em>',
+    'diksha-form-desc': 'Submitting this form is a request for an initial conversation. It does not guarantee initiation.',
+    'diksha-form-submit': 'Submit Application',
+    'shop-hero-eyebrow': 'Sacred Store',
+    'shop-hero-title': 'From the<br><em>Ashram.</em>',
+    'shop-hero-sub': 'All items are available for enquiry. WhatsApp or call to order: <span style="color:var(--gold-b);">+91 8260437455</span>',
+    'shop-filter-all': 'All',
+    'shop-filter-books': 'Books',
+    'shop-filter-yantras': 'Yantras',
+    'shop-filter-rudraksha': 'Rudraksha',
+    'shop-filter-ritual': 'Ritual Items',
+    'shop-filter-art': 'Spiritual Art',
+    'contact-hero-eyebrow': 'Connect with us',
+    'contact-hero-title': 'Reach the<br><em>Ashram.</em>',
+    'contact-details-title': 'Ashram Details',
+    'contact-address-label': 'Address',
+    'contact-phone-label': 'Phone/WhatsApp',
+    'contact-tradition-label': 'Tradition',
+    'contact-tradition-value': 'Atharvaveda & Tantric Lineage',
+    'contact-language-label': 'Language',
+    'contact-language-value': 'Odia · Hindi · English',
+    'contact-visit-note': 'The ashram does not maintain fixed visiting hours. All visits are by prior appointment only. Please call or WhatsApp before travelling.',
+    'contact-form-title': 'Send a Message',
+    'contact-form-submit': 'Send Message',
+    'contact-map-label': 'Google Maps Embed (Borigumma, Odisha)',
+
+    /* ── index.html page keys ── */
+    'ab-title-1':'The Ancient Flame<br><em>Still Burns.</em>',
+    'ab-lead-1':'Divya Jivan Siddha Ashram, seated in Borigumma, Odisha, is a living vessel of Tantric and Vedic knowledge — where unbroken Guru Parampara ensures that every sacred science is transmitted exactly as it has been for centuries.',
+    'sa-title-1':'<em>Sadhana</em> — The<br><strong>Path to Siddhi</strong>',
+    'sa-lead-1':'Each Sadhana is a complete universe — a precise, tested method to awaken direct experience of the divine through disciplined practice under Guru guidance.',
+    'ev-title-1':'Upcoming<br><em>Gatherings</em>',
+    'ev-lead-1':'Initiations, Sadhana camps, and healing sessions open to sincere seekers. Participation by prior contact.',
+    'bk-title-1':'From the<br><em>Ancient Treasury</em>',
+    'dk-title-1':'Seek the<br><em>Sacred Flame</em>',
+    'dk-sub-1':'Initiation is not a ceremony — it is a transmission. The flame of Brahma Vidya is passed from Guru to Shishya, as it has been since the beginning.',
+    'co-title-1':'<strong>Vidya</strong> — The<br><em>Way of Knowing</em>',
+    'sc-name-1':'Das Mahavidya Sadhana','sc-desc-1':'Collective practice of all ten supreme forms of Shakti — the complete circle of the divine feminine power.',
+    'sc-name-2':'Kali Pratyaksh Sadhana','sc-desc-2':'Night Sadhana and Full Siddhi Kriya for direct vision of Maa Kali.',
+    'sc-name-3':'Nav Durga Navratri Sadhana','sc-desc-3':'Nine focused one-day practices for each form of Durga.',
+    'sc-name-4':'Cemetery Sadhana','sc-desc-4':'Three-day Samsan practice for attaining specific results.',
+    'sc-name-5':'Agni Tattva Sadhana','sc-desc-5':'Fire element practice drawn from the Atharvaveda for destroying accumulated sin.',
+    'sc-name-6':'Sarp Vidya','sc-desc-6':'Ancient science of the serpent — a comprehensive three-year course transmitted through living Guru lineage.',
+    'sc-name-7':'Brahma Vidya Sadhana','sc-desc-7':'Direct instruction on the nature of Brahman and Atman.',
+    'co-tag-init':'Initiation Course',
+    'co-name-1':'Sarp Vidya — Serpent Science','co-desc-1':'The ancient, complete science of Naga wisdom — mantra, ritual, and the full corpus of serpent knowledge.',
+    'co-name-2':'Tantra Vidya & Diksha','co-desc-2':'Complete Tantric initiation — Sabar Mantra, Agama practices, Aghor and Karna Pishacha vidyas.',
+    'co-name-3':'Atharvaveda Healing Kriyas','co-desc-3':'Sacred Vedic prayers and healing rituals from the Atharvaveda.',
+    'co-name-4':'16 Sanskar Vidhi','co-desc-4':'All sixteen sacred life-cycle rites performed through authentic Tantric methods.',
+    'ft-tagline':'Preserving the ancient flame of Brahma Vidya since the beginning of the lineage.',
+    'ft-address':'Borigumma, Horadali, Odisha',
+    'ft-link-s1':'Das Mahavidya','ft-link-s2':'Nav Durga','ft-link-s3':'Maa Kali Sadhana','ft-link-s4':'Samsan Sadhana','ft-link-s5':'Agni Tattva','ft-link-s6':'Sarp Vidya',
+    'ft-link-l1':'Books','ft-link-l2':'Courses','ft-link-l3':'Guru Parampara','ft-link-l4':'About Guruji','ft-link-l5':'Testimonials','ft-link-l6':'Brahma Vidya',
+    'ft-link-j1':'Diksha — Initiation','ft-link-j2':'Membership','ft-link-j3':'Volunteer','ft-link-j4':'Events','ft-link-j5':'Donate','ft-link-j6':'Shop',
   },
   hi: {
 
@@ -850,6 +980,37 @@ const i18n = {
     'nf-home':'पवित्र भूमि पर लौटें',
     'nf-contact':'आश्रम से संपर्क करें',
     'nf-quote':'"दिव्य पथ कभी नहीं भटकता — केवल साधक की दिशा बदलती है।"',
+
+
+
+    /* ── index.html page keys (hi) ── */
+    'ab-title-1':'प्राचीन ज्वाला<br><em>अभी भी जलती है।</em>',
+    'ab-lead-1':'दिव्य जीवन सिद्ध आश्रम, ओडिशा के बोरीगुम्मा में स्थित, तांत्रिक और वैदिक ज्ञान का एक जीवित पात्र है।',
+    'sa-title-1':'<em>साधना</em> —<br><strong>सिद्धि का मार्ग</strong>',
+    'sa-lead-1':'प्रत्येक साधना एक संपूर्ण ब्रह्मांड है — गुरु मार्गदर्शन में अनुशासित अभ्यास के माध्यम से दिव्य अनुभव।',
+    'ev-title-1':'आगामी<br><em>कार्यक्रम</em>',
+    'ev-lead-1':'दीक्षा, साधना शिविर और उपचार सत्र सच्चे साधकों के लिए खुले हैं।',
+    'bk-title-1':'प्राचीन<br><em>खजाने से</em>',
+    'dk-title-1':'पवित्र ज्वाला<br><em>खोजें</em>',
+    'dk-sub-1':'दीक्षा एक समारोह नहीं — यह एक संचरण है।',
+    'co-title-1':'<strong>विद्या</strong> —<br><em>जानने का मार्ग</em>',
+    'sc-name-1':'दश महाविद्या साधना','sc-desc-1':'शक्ति के सभी दस सर्वोच्च रूपों का सामूहिक अभ्यास।',
+    'sc-name-2':'काली प्रत्यक्ष साधना','sc-desc-2':'माँ काली के प्रत्यक्ष दर्शन के लिए रात्रि साधना।',
+    'sc-name-3':'नव दुर्गा नवरात्रि साधना','sc-desc-3':'दुर्गा के प्रत्येक रूप के लिए नौ केंद्रित एक-दिवसीय अभ्यास।',
+    'sc-name-4':'श्मशान साधना','sc-desc-4':'विशिष्ट परिणाम प्राप्त करने के लिए तीन-दिवसीय श्मशान अभ्यास।',
+    'sc-name-5':'अग्नि तत्त्व साधना','sc-desc-5':'अथर्ववेद से प्राप्त अग्नि तत्व अभ्यास।',
+    'sc-name-6':'सर्प विद्या','sc-desc-6':'सर्प विज्ञान की प्राचीन विद्या — एक व्यापक तीन वर्षीय पाठ्यक्रम।',
+    'sc-name-7':'ब्रह्म विद्या साधना','sc-desc-7':'ब्रह्म और आत्मा की प्रकृति पर प्रत्यक्ष शिक्षा।',
+    'co-tag-init':'दीक्षा पाठ्यक्रम',
+    'co-name-1':'सर्प विद्या — सर्प विज्ञान','co-desc-1':'नाग ज्ञान का प्राचीन, संपूर्ण विज्ञान।',
+    'co-name-2':'तंत्र विद्या और दीक्षा','co-desc-2':'संपूर्ण तांत्रिक दीक्षा।',
+    'co-name-3':'अथर्ववेद उपचार क्रियाएँ','co-desc-3':'अथर्ववेद से पवित्र वैदिक प्रार्थनाएँ और उपचार।',
+    'co-name-4':'16 संस्कार विधि','co-desc-4':'सभी सोलह पवित्र जीवन-चक्र संस्कार।',
+    'ft-tagline':'शुरू से परम्परा की प्राचीन ज्वाला को संरक्षित करना।',
+    'ft-address':'बोरीगुम्मा, होरादाली, ओडिशा',
+    'ft-link-s1':'दश महाविद्या','ft-link-s2':'नव दुर्गा','ft-link-s3':'माँ काली साधना','ft-link-s4':'श्मशान साधना','ft-link-s5':'अग्नि तत्त्व','ft-link-s6':'सर्प विद्या',
+    'ft-link-l1':'पुस्तकें','ft-link-l2':'पाठ्यक्रम','ft-link-l3':'गुरु परम्परा','ft-link-l4':'गुरुजी के बारे में','ft-link-l5':'प्रशंसापत्र','ft-link-l6':'ब्रह्म विद्या',
+    'ft-link-j1':'दीक्षा','ft-link-j2':'सदस्यता','ft-link-j3':'स्वयंसेवक','ft-link-j4':'आयोजन','ft-link-j5':'दान','ft-link-j6':'दुकान',
   },
   od: {
 
@@ -1275,15 +1436,47 @@ const i18n = {
     'nf-home':'ପବିତ୍ର ଭୂମିକୁ ଫେରନ୍ତୁ',
     'nf-contact':'ଆଶ୍ରମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ',
     'nf-quote':'"ଦିବ୍ୟ ପଥ କେବେ ହଜେ ନାହିଁ — କେବଳ ସାଧକର ଦିଶା ପରିବର୍ତ୍ତନ ହୁଏ।"',
+
+
+
+    /* ── index.html page keys (od) ── */
+    'ab-title-1':'ପ୍ରାଚୀନ ଜ୍ୱାଳା<br><em>ଏବେ ବି ଜଳୁଛି।</em>',
+    'ab-lead-1':'ଦିବ୍ୟ ଜୀବନ ସିଦ୍ଧ ଆଶ୍ରମ, ଓଡ଼ିଶାର ବୋରୀଗୁମ୍ମାରେ ଅବସ୍ଥିତ, ତାନ୍ତ୍ରିକ ଏବଂ ବୈଦିକ ଜ୍ଞାନର ଏକ ଜୀବନ୍ତ ପାତ୍ର।',
+    'sa-title-1':'<em>ସାଧନା</em> —<br><strong>ସିଦ୍ଧିର ପଥ</strong>',
+    'sa-lead-1':'ପ୍ରତ୍ୟେକ ସାଧନା ଏକ ସମ୍ପୂର୍ଣ୍ଣ ବ୍ରହ୍ମାଣ୍ଡ।',
+    'ev-title-1':'ଆଗାମୀ<br><em>କାର୍ଯ୍ୟକ୍ରମ</em>',
+    'ev-lead-1':'ଦୀକ୍ଷା, ସାଧନା ଶିବିର ଏବଂ ଚିକିତ୍ସା ସତ୍ର ସଚ୍ଚୋଟ ସାଧକଙ୍କ ପାଇଁ ଖୋଲା।',
+    'bk-title-1':'ପ୍ରାଚୀନ<br><em>ଖଜାନାରୁ</em>',
+    'dk-title-1':'ପବିତ୍ର ଜ୍ୱାଳା<br><em>ଖୋଜନ୍ତୁ</em>',
+    'dk-sub-1':'ଦୀକ୍ଷା ଏକ ଉତ୍ସବ ନୁହେଁ — ଏହା ଏକ ସଂଚାରଣ।',
+    'co-title-1':'<strong>ବିଦ୍ୟା</strong> —<br><em>ଜାଣିବାର ପଥ</em>',
+    'sc-name-1':'ଦଶ ମହାବିଦ୍ୟା ସାଧନା','sc-desc-1':'ଶକ୍ତିର ସମସ୍ତ ଦଶ ସର୍ବୋଚ୍ଚ ରୂପର ସାମୂହିକ ଅଭ୍ୟାସ।',
+    'sc-name-2':'କାଳୀ ପ୍ରତ୍ୟକ୍ଷ ସାଧନା','sc-desc-2':'ମା କାଳୀଙ୍କ ପ୍ରତ୍ୟକ୍ଷ ଦର୍ଶନ ପାଇଁ ରାତ୍ରି ସାଧନା।',
+    'sc-name-3':'ନବ ଦୁର୍ଗା ନବରାତ୍ରି ସାଧନା','sc-desc-3':'ଦୁର୍ଗାଙ୍କ ପ୍ରତ୍ୟେକ ରୂପ ପାଇଁ ନଅଟି କେନ୍ଦ୍ରିତ ଏକ-ଦିବସୀୟ ଅଭ୍ୟାସ।',
+    'sc-name-4':'ଶ୍ମଶାନ ସାଧନା','sc-desc-4':'ନିର୍ଦ୍ଦିଷ୍ଟ ଫଳାଫଳ ପାଇଁ ତିନି-ଦିବସୀୟ ଶ୍ମଶାନ ଅଭ୍ୟାସ।',
+    'sc-name-5':'ଅଗ୍ନି ତତ୍ତ୍ୱ ସାଧନା','sc-desc-5':'ଅଥର୍ବବେଦରୁ ଅଗ୍ନି ତତ୍ତ୍ୱ ଅଭ୍ୟାସ।',
+    'sc-name-6':'ସର୍ପ ବିଦ୍ୟା','sc-desc-6':'ସର୍ପ ବିଜ୍ଞାନର ପ୍ରାଚୀନ ବିଜ୍ଞାନ — ଏକ ତିନି ବର୍ଷିୟ ପାଠ୍ୟକ୍ରମ।',
+    'sc-name-7':'ବ୍ରହ୍ମ ବିଦ୍ୟା ସାଧନା','sc-desc-7':'ବ୍ରହ୍ମ ଏବଂ ଆତ୍ମାର ପ୍ରକୃତି ଉପରେ ପ୍ରତ୍ୟକ୍ଷ ଶିକ୍ଷା।',
+    'co-tag-init':'ଦୀକ୍ଷା ପାଠ୍ୟକ୍ରମ',
+    'co-name-1':'ସର୍ପ ବିଦ୍ୟା — ସର୍ପ ବିଜ୍ଞାନ','co-desc-1':'ନାଗ ଜ୍ଞାନର ପ୍ରାଚୀନ, ସମ୍ପୂର୍ଣ୍ଣ ବିଜ୍ଞାନ।',
+    'co-name-2':'ତନ୍ତ୍ର ବିଦ୍ୟା ଏବଂ ଦୀକ୍ଷା','co-desc-2':'ସମ୍ପୂର୍ଣ୍ଣ ତାନ୍ତ୍ରିକ ଦୀକ୍ଷା।',
+    'co-name-3':'ଅଥର୍ବବେଦ ଚିକିତ୍ସା କ୍ରିୟା','co-desc-3':'ଅଥର୍ବବେଦରୁ ପବିତ୍ର ବୈଦିକ ପ୍ରାର୍ଥନା।',
+    'co-name-4':'୧୬ ସଂସ୍କାର ବିଧି','co-desc-4':'ସମସ୍ତ ଷୋହଳ ପବିତ୍ର ଜୀବନ-ଚକ୍ର ସଂସ୍କାର।',
+    'ft-tagline':'ଶୁରୁରୁ ପରମ୍ପରାର ପ୍ରାଚୀନ ଜ୍ୱାଳାକୁ ସଂରକ୍ଷଣ କରିବା।',
+    'ft-address':'ବୋରୀଗୁମ୍ମା, ହ୍ରଦାଲି, ଓଡ଼ିଶା',
+    'ft-link-s1':'ଦଶ ମହାବିଦ୍ୟା','ft-link-s2':'ନବ ଦୁର୍ଗା','ft-link-s3':'ମା କାଳୀ ସାଧନା','ft-link-s4':'ଶ୍ମଶାନ ସାଧନା','ft-link-s5':'ଅଗ୍ନି ତତ୍ତ୍ୱ','ft-link-s6':'ସର୍ପ ବିଦ୍ୟା',
+    'ft-link-l1':'ପୁସ୍ତକ','ft-link-l2':'ପାଠ୍ୟକ୍ରମ','ft-link-l3':'ଗୁରୁ ପରମ୍ପରା','ft-link-l4':'ଗୁରୁଜୀ ବିଷୟ','ft-link-l5':'ପ୍ରଶଂସାପତ୍ର','ft-link-l6':'ବ୍ରହ୍ମ ବିଦ୍ୟା',
+    'ft-link-j1':'ଦୀକ୍ଷା','ft-link-j2':'ସଦସ୍ୟତା','ft-link-j3':'ସ୍ୱୟଂସେବକ','ft-link-j4':'ଇଭେଣ୍ଟ','ft-link-j5':'ଦାନ','ft-link-j6':'ଦୋକାନ',
   }
 };
 
 /* ── Apply language ── */
 let currentLang = 'en';
-function applyLang(lang) {
+function applyLang(lang, root) {
   currentLang = lang;
   const strings = i18n[lang];
-  document.querySelectorAll('[data-i18n]').forEach(el => {
+  const container = root || document;
+  container.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (strings[key]) el.innerHTML = strings[key];
   });
@@ -1291,11 +1484,22 @@ function applyLang(lang) {
     b.classList.toggle('active', b.getAttribute('data-lang-switch') === lang);
   });
   document.documentElement.setAttribute('lang', lang === 'hi' ? 'hi' : lang === 'od' ? 'or' : 'en');
+  document.body.classList.toggle('lang-od', lang === 'od');
+  try { localStorage.setItem('djsa-lang', lang); } catch(e) {}
 }
 document.querySelectorAll('[data-lang-switch]').forEach(btn => {
   btn.addEventListener('click', () => applyLang(btn.getAttribute('data-lang-switch')));
 });
+/* Utility: re-scan dynamically loaded content for [data-i18n] */
+function scanI18n(container) { applyLang(currentLang, container); }
 
+/* Restore saved language */
+document.addEventListener('DOMContentLoaded', function() {
+  try {
+    var saved = localStorage.getItem('djsa-lang');
+    if (saved && i18n[saved]) applyLang(saved);
+  } catch(e) {}
+});
 /* ── Cursor ── */
 const cur  = document.getElementById('cursor');
 const curR = document.getElementById('cursor-ring');

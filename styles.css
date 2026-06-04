@@ -936,7 +936,80 @@ footer{
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   20. WHATSAPP BUTTON
+   20. ODIA LANGUAGE FONT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* Body + all translated text via [data-i18n] */
+body.lang-od,
+body.lang-od [data-i18n] {
+  font-family: 'Noto Sans Oriya', 'Hind', sans-serif;
+}
+/* Display headings not always data-i18n'd */
+body.lang-od .section-title,
+body.lang-od .hero-name,
+body.lang-od .diksha-title,
+body.lang-od .course-name,
+body.lang-od .ev-title,
+body.lang-od .s-card-name,
+body.lang-od .book-title,
+body.lang-od .footer-brand-name,
+body.lang-od .loader-diya-name,
+body.lang-od .astat-n,
+body.lang-od .s-card-num,
+body.lang-od .ev-day,
+body.lang-od .mb-t1-name,
+body.lang-od .mb-t2-name,
+body.lang-od .mb-t3-name,
+body.lang-od .mb-t4-name,
+body.lang-od .mb-t1-sub,
+body.lang-od .mb-t2-sub,
+body.lang-od .mb-t3-sub,
+body.lang-od .mb-t4-sub,
+body.lang-od .mb-t1-price,
+body.lang-od .mb-t2-price,
+body.lang-od .mb-t3-price,
+body.lang-od .mb-t4-price,
+body.lang-od .mb-life-price {
+  font-family: 'Noto Sans Oriya', 'Outfit', sans-serif;
+}
+/* UI text that might lack data-i18n */
+body.lang-od .eyebrow,
+body.lang-od .scroll-label,
+body.lang-od .hero-eyebrow,
+body.lang-od .s-card-deity,
+body.lang-od .s-card-level,
+body.lang-od .ev-sub,
+body.lang-od .ev-badge,
+body.lang-od .ev-mon,
+body.lang-od .course-tag,
+body.lang-od .course-meta-tag,
+body.lang-od .book-tag,
+body.lang-od .footer-link,
+body.lang-od .footer-copy,
+body.lang-od .footer-col-title,
+body.lang-od .footer-legal a,
+body.lang-od .section-lead,
+body.lang-od .footer-tagline,
+body.lang-od .footer-contact,
+body.lang-od .btn-primary,
+body.lang-od .btn-ghost,
+body.lang-od .diksha-sub,
+body.lang-od .lang-line,
+body.lang-od .nav-logo-main,
+body.lang-od .nav-logo-sub,
+body.lang-od .loader-sub,
+body.lang-od .loader-tagline,
+body.lang-od .nav-links a,
+body.lang-od .lang-btn,
+body.lang-od .marquee-track span,
+body.lang-od .course-link,
+body.lang-od .book-lang-tag,
+body.lang-od .wa-float {
+  font-family: 'Noto Sans Oriya', 'Outfit', sans-serif;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   21. WHATSAPP BUTTON/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   21. WHATSAPP BUTTON
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .wa-float {
   position: fixed;
