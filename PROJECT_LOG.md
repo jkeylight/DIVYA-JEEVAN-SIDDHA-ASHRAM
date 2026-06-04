@@ -8,7 +8,7 @@ The website serves as the digital presence for the ashram — showcasing its pra
 
 **Tech Stack:** Pure HTML + CSS + vanilla JavaScript. No frameworks, no build tools, no dependencies. Static files only.
 
-**Design Language:** Dark, sacred aesthetic with gold accents on deep void backgrounds. Fonts: Cormorant Garamond (display), Outfit (UI body), Hind (Hindi body). Custom cursor, preloader curtain animation, scroll-reveal animations, and a language switcher (EN / हि / ଓ).
+**Design Language:** Dark, sacred aesthetic with gold accents on deep void backgrounds. Fonts: Cormorant Garamond (display), Outfit (UI body), Hind (Hindi body), Noto Sans Oriya (Odia body). Custom cursor, preloader curtain animation, scroll-reveal animations, and a language switcher (EN / हि / ଓ).
 
 ---
 
@@ -47,13 +47,14 @@ The website serves as the digital presence for the ashram — showcasing its pra
 | Page | File | Description |
 |------|------|-------------|
 | 404 Error | `404.html` | Custom 404 page matching site design with i18n support |
+| Thank You | `thank-you.html` | Form submission confirmation page (NEW) |
 
 ### Shared Infrastructure
 
 | File | Description |
 |------|-------------|
-| `styles.css` | Complete design system — CSS custom properties, responsive grid, all component styles |
-| `shared.js` | i18n system (EN/HI/OD), custom cursor, preloader, nav scroll, scroll-reveal, language switcher |
+| `styles.css` | Complete design system — CSS custom properties, responsive grid, all component styles, `.lang-od` Odia font rules |
+| `shared.js` | i18n system (EN/HI/OD), custom cursor, preloader, nav scroll, scroll-reveal, language switcher, localStorage persistence, scanI18n utility |
 | `favicon.svg` | SVG flame logo favicon matching the site's sacred branding |
 
 ### SEO & Discoverability
@@ -61,9 +62,9 @@ The website serves as the digital presence for the ashram — showcasing its pra
 | File | Description |
 |------|-------------|
 | `robots.txt` | Standard robots.txt allowing all crawlers, pointing to sitemap |
-| `sitemap.xml` | XML sitemap with all 19 pages listed |
+| `sitemap.xml` | XML sitemap with all pages listed |
 
-**All 18 HTML pages** include:
+**All HTML pages** include:
 - Open Graph meta tags (og:title, og:description, og:type, og:url)
 - Twitter Card meta tags
 - Canonical URLs
@@ -72,36 +73,87 @@ The website serves as the digital presence for the ashram — showcasing its pra
 
 ### Accessibility
 
-**All 18 HTML pages** include:
+**All HTML pages** include:
 - Skip-to-content link (`.skip-link`) — visible on keyboard focus
-- ARIA labels on `<nav>` ("Primary navigation") and `<footer>` ("Site footer")
-- `role="main"` and `aria-label="Main content"` on main content area
-- `lang="en"` attribute on `<html>` element
-- Skip-nav i18n keys in all 3 languages (EN: "Skip to content", HI: "मुख्य सामग्री पर जाएं", OD: "ମୁଖ୍ୟ ବିଷୟବସ୍ତୁକୁ ଯାନ୍ତୁ")
+- ARIA labels on `<nav>` (\"Primary navigation\") and `<footer>` (\"Site footer\")
+- `role=\"main\"` and `aria-label=\"Main content\"` on main content area
+- `lang=\"en\"` attribute on `<html>` element
+- Skip-nav i18n keys in all 3 languages (EN: \"Skip to content\", HI: \"मुख्य सामग्री पर जाएं\", OD: \"ମୁଖ୍ୟ ବିଷୟବସ୍ତୁକୁ ଯାନ୍ତୁ\")
 
-### Internationalization (i18n) — COMPLETE
+### Internationalization (i18n) — COMPLETE ✅
+
+**Last updated: June 4, 2026 — Full i18n system now operational across all pages.**
 
 - **3 languages:** English (EN), Hindi (हि), Odia (ଓ)
-- **~950+ translation keys** across all pages in `shared.js`
-- **All 19 pages** (including 404) have `data-i18n` attributes on headings, descriptions, cards, tables, FAQ Q&A, quotes, and key visible text
+- **1,150+ translation keys** across all pages in `shared.js`
+- **All 19+ pages** have `data-i18n` attributes on headings, descriptions, cards, tables, FAQ Q&A, quotes, form labels, and key visible text
 - Language switcher works on every page — nav links, hero sections, section headings, content, footer
+- **Language persistence:** Selected language saved to `localStorage` (`djsa-lang`) and restored on page load via `DOMContentLoaded`
+- **Odia font rendering:** `body.lang-od` class toggled when Odia is selected, applying `Noto Sans Oriya` font via Google Fonts
+- **Dynamic content scanning:** `scanI18n(container)` utility available for re-translating dynamically loaded content
+- **Hero language cycle:** Respects saved language — starts cycling from the user's chosen language
+
+#### i18n Architecture
+
+```
+shared.js
+├── i18n.en { ... }    — English translations
+├── i18n.hi { ... }    — Hindi translations  
+├── i18n.od { ... }    — Odia translations
+├── applyLang(lang, root) — Translates all [data-i18n] elements
+│   ├── Saves to localStorage
+│   ├── Toggles body.lang-od class
+│   ├── Updates HTML lang attribute
+│   └── Scans root container (default: document)
+├── scanI18n(container) — Utility wrapper for dynamic content
+└── DOMContentLoaded   — Restores saved language on page load
+```
 
 ### Footer & Navigation
 
-- Consistent footer across all 19 pages with proper links to:
+- Consistent footer across all pages with proper links to:
   - Sadhana, Learn (Books, Courses, About), Join (Diksha, Membership, Volunteer, Events, Donate, Shop)
   - Legal (Privacy, Terms, Tantra Safety, Disclaimer)
 - Nav logo links fixed from `#` to `index.html` on all pages
 - Active nav state managed by JavaScript
+- **Duplicate data-i18n attributes cleaned up** across all HTML files
 
 ### Animations & Interactions
 
 - Custom cursor with hover states on interactive elements
 - Preloader with animated flame SVG and curtain reveal
 - Scroll-reveal animations via IntersectionObserver
-- Language cycle animation in hero section
+- Language cycle animation in hero section (respects saved language)
 - WhatsApp floating button on all pages
 - Filterable grids for Sadhana, Events, Courses, Shop
+
+### Form Backends — Formspree Integration ✅
+
+**Last updated: June 4, 2026 — All 4 forms connected to Formspree.**
+
+| Form | File | Formspree ID Field |
+|------|------|-------------------|
+| Event Registration | `events_content.html` | `event-registration` |
+| Course Enquiry | `courses_content.html` | `course-enquiry` |
+| Diksha Application | `diksha_content.html` | `diksha-application` |
+| Contact Message | `contact_content.html` | `contact-message` |
+
+Each form includes:
+- `action` attribute pointing to Formspree endpoint
+- `method="POST"` 
+- Hidden `_subject` field with descriptive email subject
+- Hidden `_next` field redirecting to `thank-you.html`
+- Hidden `_form` field for form identification in Formspree dashboard
+- JavaScript handler with loading state, success animation, and error handling
+- **⚠️ ACTION REQUIRED:** Replace `YOUR_FORM_ID_HERE` with your actual Formspree form ID in all 4 content files. Get your ID at https://formspree.io/forms
+
+### Browser-Tested Features
+
+- ✅ Language switching (EN → HI → OD → EN) works correctly on `index.html`
+- ✅ Language persistence across page refreshes
+- ✅ No JavaScript console errors
+- ✅ All `data-i18n` attributes applied correctly
+- ✅ `shared.js` validates as correct JavaScript
 
 ---
 
@@ -126,18 +178,18 @@ These sections are documented in the project reference files but have **not yet 
 
 ### Technical Improvements Needed
 
-- [ ] **Form handling** — forms currently don't submit anywhere (need backend or Formspree/Netlify Forms)
+- [ ] **Replace Formspree placeholder** — change `YOUR_FORM_ID_HERE` to actual form ID in all 4 content files
 - [ ] **Images** — no actual ashram photographs integrated (design has placeholder patterns)
-- [ ] **Performance** — no image optimization, no lazy loading
+- [ ] **Performance** — no image optimization, no lazy loading beyond basic
 - [ ] **Analytics** — no tracking (Google Analytics, Plausible, etc.)
 - [ ] **Structured data** — no JSON-LD schema for SEO
 - [ ] **PWA / Service Worker** — not implemented
 
 ### Content Gaps
 
-- [ ] Bank account details for donations (marked as "[To be added]")
-- [ ] UPI ID (marked as "[To be added]")
-- [ ] SWIFT/IBAN codes for international donors (marked as "[To be added]")
+- [ ] Bank account details for donations (marked as \"[To be added]\")
+- [ ] UPI ID (marked as \"[To be added]\")
+- [ ] SWIFT/IBAN codes for international donors (marked as \"[To be added]\")
 - [ ] Actual ashram photographs (currently using gradient/pattern placeholders)
 - [ ] Guruji's detailed biography and photo
 - [ ] Course curriculum details and schedules
@@ -174,13 +226,12 @@ These sections are documented in the project reference files but have **not yet 
 ├── refund.html             # Refund Policy
 ├── shipping.html           # Shipping Policy
 ├── 404.html                # Custom 404 error page
+├── thank-you.html          # Form submission confirmation (NEW)
 ├── favicon.svg             # SVG flame logo favicon
 ├── styles.css              # Complete design system
-├── shared.js               # i18n system + animations + nav
+├── shared.js               # i18n system + animations + nav + Formspree handler
 ├── robots.txt              # Search engine crawler instructions
 ├── sitemap.xml             # XML sitemap for SEO
-├── check_i18n.js           # i18n validation utility
-├── update_i18n.js          # i18n update utility
 ├── ANTIGRAVITY_MASTER_PROMPT.md  # Master design prompt
 ├── BOOKS.txt               # Book reference data
 ├── more.txt                # Additional page content reference
@@ -193,14 +244,15 @@ These sections are documented in the project reference files but have **not yet 
 
 | Metric | Count |
 |--------|-------|
-| Total HTML pages | 25 (19 content + 6 content files) |
+| Total HTML pages | 26 (19 content + 7 content files) |
 | Total CSS | 1 (`styles.css` — comprehensive design system) |
-| Total JS | 1 (`shared.js` — i18n + animations) |
+| Total JS | 1 (`shared.js` — i18n + animations + form handling) |
 | Languages supported | 3 (English, Hindi, Odia) |
-| i18n translation keys | ~950+ |
+| i18n translation keys | 1,150+ |
 | Footer links | Consistent across all pages |
 | Legal pages | 5 (Privacy, Terms, Tantra Safety, Disclaimer, Refund) |
-| Forms | 5 (Events registration, Courses enquiry, Diksha application, Contact, Shop enquiry) |
+| Forms with backends | 4 (Events, Courses, Diksha, Contact — via Formspree) |
+| Forms without backends | 1 (Shop — WhatsApp enquiry only) |
 | Accessibility features | Skip-to-content, ARIA labels, lang attribute, roles |
 
 ---
@@ -208,12 +260,24 @@ These sections are documented in the project reference files but have **not yet 
 ## 🔧 Development Notes
 
 - All pages follow the same template structure: loader → curtain → nav → main content → footer → WhatsApp float
-- The `applyLang()` function in `shared.js` handles all language switching by replacing `innerHTML` of elements with `data-i18n` attributes
+- The `applyLang(lang, root)` function in `shared.js` handles all language switching by replacing `innerHTML` of elements with `data-i18n` attributes. The optional `root` parameter allows scanning specific containers for dynamically loaded content.
 - The design uses CSS custom properties extensively (e.g., `var(--void)`, `var(--forest)`, `var(--gold)`, `var(--paper)`)
 - Scroll-reveal uses IntersectionObserver with `data-r` attributes and `.on` class
 - All pages are self-contained — no build step required
+- **Formspree forms** use `fetch()` API with error handling and redirect to `thank-you.html` on success
+- **Language persistence** uses `localStorage` key `djsa-lang` with values `en`, `hi`, or `od`
+- **Odia font** loaded via Google Fonts: `Noto Sans Oriya` (weights 300–600)
+- Hero language cycle starts from the user's saved language and rotates every 4 seconds
+
+### Git Commits (Recent)
+
+| Commit | Date | Description |
+|--------|------|-------------|
+| `5553602` | June 4, 2026 | feat: add Formspree form backends and thank-you page |
+| `9e7dfd8` | June 4, 2026 | feat: complete multilingual i18n - localStorage, Odia font, 200+ keys, hero cycle fix |
+| `6422a9f` | June 3, 2026 | Add accessibility, SEO, favicon, 404 page, and i18n completion |
 
 ---
 
-*Last updated: June 3, 2026*
+*Last updated: June 4, 2026*
 *Project repository: https://github.com/jkeylight/DIVYA-JEEVAN-SIDDHA-ASHRAM*
